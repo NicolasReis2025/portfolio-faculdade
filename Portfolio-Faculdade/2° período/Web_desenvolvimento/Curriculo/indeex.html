@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Inscrição para o evento cultural</h1>
+    <h2>Dados pessoais</h2>
+
+    <form action="Dados pessoais" method="post" enctype="multipart/form-data">
+
+        <label for="nome">Digite seu nome completo: </label>
+        <input type="text" id="nome" name="nomeUsuario" required>
+
+        <br><br>
+
+        <label for="email">Digite seu e-mail: </label>
+        <input type="email" id="email" name="emailUsuario" required>
+
+        <br><br>
+
+        <label for="telefone">Digite seu telefone: </label>
+        <input type="tel" id="telefone" name="telefoneUsuario" placeholder="(xx) xxxxx-xxxx">
+
+        <br><br>
+
+        <label for="idade">Digite sua idade: </label>
+        <input type="number" id="idade" name="idadeUsuario" min="1">
+
+        <br><br>
+
+        <h2>Dados da inscrição</h2>
+
+        <label for="cidade">Selecione sua cidade: </label><br>
+        <select id="cidade" name="cidadeUsuario" required>
+            <option value="" disabled selected>-- Escolha uma cidade --</option>
+            <option value="sao paulo">São Paulo</option>
+            <option value="Campinas">Campinas</option>
+            <option value="Paulinia">Paulinia</option>
+            <option value="Valinhos">Valinhos</option>
+            <option value="Vinhedo">Vinhedo</option>
+        </select>
+
+        <br><br>
+
+        <label for="tipoParticipacao">Selecione o tipo de participação</label><br>
+        <select name="tipoParticipacao" id="tipoParticipacao">
+            <option value="" disabled selected>-- Escolha o tipo de participação --</option>
+            <option value="Ouvinte">Ouvinte</option>
+            <option value="Palestrante">Palestrante</option>
+            <option value="Expositor">Expositor</option>
+        </select>
+
+        <br><br>
+
+        <h3>Interesses:</h3>
+        <input type="checkbox" id="palestras" name="interesses" value="Palestras">
+        <label for="palestras">Palestras</label><br>
+
+        <input type="checkbox" id="oficinas" name="interesses" value="Oficinas">
+        <label for="oficinas">Oficinas</label><br>
+
+        <input type="checkbox" id="exposicao" name="interesses" value="Exposição">
+        <label for="exposicao">Exposição</label><br>
+
+        <input type="checkbox" id="networking" name="interesses" value="Networking">
+        <label for="networking">Networking</label><br>
+
+        <br>
+
+        <label for="corCracha">Escolha a cor do crachá: </label>
+        <input type="color" id="corCracha" name="corCracha" value="#0000ff">
+
+        <br><br>
+
+        <label for="apresentacao">Breve apresentação:</label><br>
+        <textarea id="apresentacao" name="apresentacao" rows="3" cols="40"
+            placeholder="Escreva uma breve apresentação..."></textarea>
+
+        <br><br>
+
+        <label for="foto">Envie sua foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+
+        <br><br>
+        <button type="reset"> Limpar formulário</button>
+        <button type="submit">Enviar inscrição</button>
+    </form>
+
+</body>
+
+</html>
